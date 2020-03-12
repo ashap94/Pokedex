@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PokemonIndexItem from "./pokemon_index_item";
 
 const PokemonIndex = props => {
   const [loaded, setLoaded] = useState(false);
@@ -12,16 +13,13 @@ const PokemonIndex = props => {
     return null;
   }
 
-  let pokemon = props.pokemon.map(poke => (
-    <li key={poke.id}>
-      <h3>{poke.name}</h3>
-      <img src={poke.image_url} />
-    </li>
+  let pokemonItem = props.pokemon.map(poke => (
+    <PokemonIndexItem key={poke.id} pokemon={poke} />
   ));
 
   return (
     <div>
-      <ul>{pokemon}</ul>
+      <ul>{pokemonItem}</ul>
     </div>
   );
 };
