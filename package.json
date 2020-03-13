@@ -22,7 +22,8 @@
     "test": "test"
   },
   "scripts": {
-    "start": "webpack --watch --mode=development"
+    "start": "webpack --watch --mode=development",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -35,5 +36,9 @@
     "url": "https://github.com/ashap94/Pokedex/issues"
   },
   "homepage": "https://github.com/ashap94/Pokedex#readme",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.14.2"
+  }
 }
