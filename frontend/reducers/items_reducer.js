@@ -6,9 +6,8 @@ const itemsReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_POKEMON:
-      newState = Object.assign({}, state, action.payload.items);
-      return newState;
-
+      //   newState = Object.assign({}, state, action.payload.items);
+      return action.payload.items;
     default:
       return state;
   }

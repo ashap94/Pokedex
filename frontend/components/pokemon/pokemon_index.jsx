@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PokemonIndexItem from "./pokemon_index_item";
+import PokemonDetailContainer from "./pokemon_detail_container";
+import { Route } from "react-router-dom";
 
 const PokemonIndex = props => {
   const [loaded, setLoaded] = useState(false);
@@ -19,6 +21,7 @@ const PokemonIndex = props => {
 
   return (
     <div>
+      <Route path="/pokemon/:pokemonId" component={PokemonDetailContainer} />
       <ul>{pokemonItem}</ul>
     </div>
   );
