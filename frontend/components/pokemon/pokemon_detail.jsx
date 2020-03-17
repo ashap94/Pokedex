@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import ItemDetailContainer from "../items/item_detail_container";
+import { Route, Link } from "react-router-dom";
 
 const PokemonDetail = props => {
   const [loaded, setLoaded] = useState(false);
@@ -16,19 +18,34 @@ const PokemonDetail = props => {
     return null;
   }
 
-  //   let items = props.items.map( item => {
-  //       <li key=></li>
-  //   })
-  console.log("WHAT DOES POKEMON LOOK LIKE:   ", props.pokemon);
+  let items = props.items.map(item => (
+    <li key={item.id}>
+      <Link to={`/pokemon/${item.pokemon_id}/item/${item.id}`}>
+        <img src={item.image_url} alt={item.name} />
+      </Link>
+    </li>
+  ));
 
   return (
     <div>
-      <img src={props.pokemon.image_url} alt="" />
-      <h3>{props.pokemon.name}</h3>
-      <p>Type: {props.pokemon.poke_type}</p>
-      <p>Attack: {props.pokemon.attack}</p>
-      <p>Defense: {props.pokemon.defense}</p>
-      <p>Moves: {props.pokemon.moves.join(", ")}</p>
+      <ul>
+        <li>
+          <img src={props.pokemon.image_url} alt="" />
+        </li>
+        <li>
+          <h3>{props.pokemon.name}</h3>
+        </li>
+        <li>Type: {props.pokemon.poke_type}</li>
+        <li>Attack: {props.pokemon.attack}</li>
+        <li>Defense: {props.pokemon.defense}</li>
+        <li>Moves: {props.pokemon.moves.join(", ")}</li>
+      </ul>
+
+      <ul>{items}</ul>
+      <Route
+        path="/pokemon/:pokemonId/item/:itemId"
+        component={ItemDetailContainer}
+      />
     </div>
   );
 };

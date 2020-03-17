@@ -8,7 +8,11 @@ const pokemonReducer = (state = {}, action) => {
   let newState = {};
   switch (action.type) {
     case RECEIVE_ALL_POKEMON:
-      newState = Object.assign({}, state, action.pokemon);
+      //   if (Object.values(state).length === 1) {
+      //       let singlePokemon = Object.values(state)[0];
+      //       newState = Object.assign( {},  )
+      //   }
+      newState = Object.assign({}, action.pokemon, state);
       return newState;
 
     case RECEIVE_POKEMON:

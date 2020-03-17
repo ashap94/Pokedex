@@ -4,6 +4,7 @@ import { requestSinglePokemon } from "../../actions/pokemon_actions";
 
 const mapStateToProps = (state, ownProps) => {
   let targetPokemon = state.entities.pokemon[ownProps.match.params.pokemonId];
+
   return {
     pokemon: targetPokemon,
     items: Object.values(state.entities.items)
