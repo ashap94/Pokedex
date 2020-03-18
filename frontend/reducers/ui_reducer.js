@@ -1,11 +1,7 @@
-const uiReducer = (state = {}, action) => {
-  Object.freeze(state);
-  let newState = {};
+import { combineReducers } from "redux";
 
-  switch (action.type) {
-    default:
-      return state;
-  }
-};
+import errorsReducer from "./errors_reducer";
 
-export default uiReducer;
+export default combineReducers({
+  errors: errorsReducer
+});

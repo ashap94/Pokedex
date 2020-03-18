@@ -35,10 +35,19 @@ class PokemonForm extends React.Component {
       .then(pokemon => this.props.history.push(`/pokemon/${pokemon.id}`));
   }
 
+  errors() {
+    if (this.props.errors.length !== 0) {
+      return this.props.errors.map(error => {
+        return <li key={error}>{error}</li>;
+      });
+    }
+  }
+
   render() {
     return (
       <section>
         <img src={window.images.pokeLogo} alt="Copyright of Nintendo Pokemon" />
+        <ul>{this.errors()}</ul>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"

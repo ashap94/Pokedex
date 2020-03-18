@@ -9,7 +9,7 @@ const itemsReducer = (state = {}, action) => {
       if (!action.payload.items) {
         return {};
       } else {
-        newState = Object.assign({}, state, action.payload.items);
+        newState = Object.assign({}, action.payload.items);
         return newState;
       }
 

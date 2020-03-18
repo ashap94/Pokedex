@@ -3,7 +3,9 @@ import { createPokemon } from "../../actions/pokemon_actions";
 import PokemonForm from "./pokemon_form";
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    errors: state.ui.errors
+  };
 };
 
 const mapDispatchToProps = dispatch => {
@@ -12,4 +14,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(null, mapDispatchToProps)(PokemonForm);
+export default connect(mapStateToProps, mapDispatchToProps)(PokemonForm);
