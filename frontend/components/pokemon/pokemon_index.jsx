@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import PokemonIndexItem from "./pokemon_index_item";
 import PokemonDetailContainer from "./pokemon_detail_container";
+import PokemonFormContainer from "./pokemon_form_container";
 import { Route } from "react-router-dom";
 
 const PokemonIndex = props => {
@@ -21,6 +22,7 @@ const PokemonIndex = props => {
 
   return (
     <div>
+      <Route exact path="/" component={PokemonFormContainer} />
       <Route path="/pokemon/:pokemonId" component={PokemonDetailContainer} />
       <ul>{pokemonItem}</ul>
     </div>
