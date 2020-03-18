@@ -18,7 +18,7 @@ class PokemonForm extends React.Component {
 
   updateMoves(e) {
     this.setState({
-      moves: Object.assign({}, this.state, {
+      moves: Object.assign({}, this.state.moves, {
         [e.target.id]: e.target.value
       })
     });

@@ -353,7 +353,7 @@ var PokemonForm = /*#__PURE__*/function (_React$Component) {
     key: "updateMoves",
     value: function updateMoves(e) {
       this.setState({
-        moves: Object.assign({}, this.state, _defineProperty({}, e.target.id, e.target.value))
+        moves: Object.assign({}, this.state.moves, _defineProperty({}, e.target.id, e.target.value))
       });
     }
   }, {
@@ -725,8 +725,12 @@ var itemsReducer = function itemsReducer() {
 
   switch (action.type) {
     case _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_POKEMON"]:
-      //   newState = Object.assign({}, state, action.payload.items);
-      return action.payload.items;
+      if (!action.payload.items) {
+        return {};
+      } else {
+        newState = Object.assign({}, state, action.payload.items);
+        return newState;
+      }
 
     default:
       return state;
