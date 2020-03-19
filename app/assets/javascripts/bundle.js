@@ -530,6 +530,10 @@ var PokemonIndex = function PokemonIndex(props) {
   // const [loaded, setLoaded] = useState(false);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     props.requestAllPokemon(); // setLoaded(true);
+
+    document.getElementById("pokeball-image").addEventListener("click", function () {
+      props.history.push("/");
+    });
   }, []); // if (loaded === false) {
   //   return null;
   // }
@@ -552,7 +556,7 @@ var PokemonIndex = function PokemonIndex(props) {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, pokemonItem));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (PokemonIndex);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["withRouter"])(PokemonIndex));
 
 /***/ }),
 

@@ -254,3 +254,13 @@
     }
   }
 }
+
+#pokeball-image {
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 1px 1px 5px;
+    filter: brightness(50);
+  }
+}

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import PokemonIndexItem from "./pokemon_index_item";
 import PokemonDetailContainer from "./pokemon_detail_container";
 import PokemonFormContainer from "./pokemon_form_container";
-import { Route } from "react-router-dom";
+import { Route, withRouter } from "react-router-dom";
 
 const PokemonIndex = props => {
   // const [loaded, setLoaded] = useState(false);
@@ -10,6 +10,11 @@ const PokemonIndex = props => {
   useEffect(() => {
     props.requestAllPokemon();
     // setLoaded(true);
+    document
+      .getElementById("pokeball-image")
+      .addEventListener("click", function() {
+        props.history.push("/");
+      });
   }, []);
 
   // if (loaded === false) {
@@ -29,4 +34,4 @@ const PokemonIndex = props => {
   );
 };
 
-export default PokemonIndex;
+export default withRouter(PokemonIndex);
