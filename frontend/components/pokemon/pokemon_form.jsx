@@ -45,10 +45,10 @@ class PokemonForm extends React.Component {
 
   render() {
     return (
-      <section>
+      <section className="pokemon-detail">
         <img src={window.images.pokeLogo} alt="Copyright of Nintendo Pokemon" />
         <ul>{this.errors()}</ul>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="pokemon-form">
           <input
             type="text"
             value={this.state.name}

@@ -1,5 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+// import "../app/assets/stylesheets/reset.scss";
+// import "../app/assets/stylesheets/variables.scss";
+// import "bootstrap";
+// import "../app/assets/stylesheets/application.scss";
+
 import { requestAllPokemon } from "./actions/pokemon_actions";
 import { fetchAllPokemon } from "./util/api_util";
 import configureStore from "./store/store";

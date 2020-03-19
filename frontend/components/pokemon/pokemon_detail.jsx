@@ -27,7 +27,7 @@ const PokemonDetail = props => {
   ));
 
   return (
-    <div>
+    <section className="pokemon-detail">
       <ul>
         <li>
           <img src={props.pokemon.image_url} alt="" />
@@ -46,7 +46,7 @@ const PokemonDetail = props => {
         path="/pokemon/:pokemonId/item/:itemId"
         component={ItemDetailContainer}
       />
-    </div>
+    </section>
   );
 };
 

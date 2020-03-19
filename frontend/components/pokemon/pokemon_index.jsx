@@ -21,7 +21,7 @@ const PokemonIndex = props => {
   ));
 
   return (
-    <div>
+    <div className="pokedex">
       <Route exact path="/" component={PokemonFormContainer} />
       <Route path="/pokemon/:pokemonId" component={PokemonDetailContainer} />
       <ul>{pokemonItem}</ul>
