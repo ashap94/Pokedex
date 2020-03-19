@@ -13,6 +13,16 @@
     border-radius: 20px;
     margin-left: 40px;
     overflow: scroll;
+
+    > li {
+      a {
+        display: block;
+      }
+
+      &:active {
+        background-color: $red;
+      }
+    }
   }
 }
 
@@ -26,6 +36,42 @@
   margin: 0 40px;
   background-color: #999999;
   padding: 20px;
+  overflow: scroll;
+
+  ul {
+    text-align: center;
+
+    li {
+      padding: 10px 0;
+      color: $red;
+    }
+  }
+}
+
+.pokemon-index-item {
+  padding: 5px 10px;
+  border-bottom: 1px solid;
+  &:hover {
+    cursor: pointer;
+    background-color: $light-grey;
+  }
+
+  img {
+    width: 20px;
+    margin: 0 15px;
+    vertical-align: middle;
+  }
+
+  a {
+    text-decoration: none;
+    &:active {
+      background-color: $red;
+    }
+  }
+
+  span {
+    color: black;
+  }
 }
 
 .pokemon-form {
@@ -43,8 +89,25 @@
   button {
     border: 0;
     font-size: 16px;
+    background: none;
+    -webkit-appearance: none;
+    border-radius: 0;
     margin: 20px 0;
     width: 100%;
     border-bottom: 1px solid black;
+  }
+
+  button {
+    background-color: $red;
+    color: white;
+    font-weight: bold;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  select {
+    cursor: pointer;
   }
 }

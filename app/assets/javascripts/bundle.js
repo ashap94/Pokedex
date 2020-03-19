@@ -600,12 +600,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var PokemonIndexItem = function PokemonIndexItem(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "pokemon-index-item"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/pokemon/".concat(props.pokemon.id)
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.pokemon.name), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.pokemon.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: props.pokemon.image_url,
-    alt: props.pokemon.name + " image"
-  })));
+    alt: props.pokemon.name
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, props.pokemon.name)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PokemonIndexItem);
