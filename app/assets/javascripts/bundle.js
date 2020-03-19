@@ -256,10 +256,10 @@ var PokemonDetail = function PokemonDetail(props) {
   });
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "pokemon-detail"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: props.pokemon.image_url,
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.pokemon.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Type: ", props.pokemon.poke_type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Attack: ", props.pokemon.attack), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Defense: ", props.pokemon.defense), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Moves: ", props.pokemon.moves.join(", "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, items), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    alt: props.pokemon.name
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, props.pokemon.name)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Type: ", props.pokemon.poke_type), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Attack: ", props.pokemon.attack), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Defense: ", props.pokemon.defense), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, "Moves: ", props.pokemon.moves.join(", "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, items), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/pokemon/:pokemonId/item/:itemId",
     component: _items_item_detail_container__WEBPACK_IMPORTED_MODULE_1__["default"]
   }));

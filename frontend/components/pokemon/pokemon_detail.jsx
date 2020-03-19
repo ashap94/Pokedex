@@ -28,10 +28,10 @@ const PokemonDetail = props => {
 
   return (
     <section className="pokemon-detail">
+      <figure>
+        <img src={props.pokemon.image_url} alt={props.pokemon.name} />
+      </figure>
       <ul>
-        <li>
-          <img src={props.pokemon.image_url} alt="" />
-        </li>
         <li>
           <h3>{props.pokemon.name}</h3>
         </li>
