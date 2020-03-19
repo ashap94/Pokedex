@@ -14,7 +14,7 @@ json.items do
             # begin
             #     json.image_url asset_path("images/#{item.image_url}")
             # rescue
-                json.image_url item.image_url
+                json.image_url asset_path("#{item.image_url}")
             # end
         end
     end
