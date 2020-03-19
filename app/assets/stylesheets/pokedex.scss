@@ -44,8 +44,8 @@
     width: 80%;
     padding: 20px;
     max-height: 400px;
-
     background: linear-gradient(-45deg, $red, $yellow);
+    margin: 12px 40px;
 
     img {
       width: 100%;
@@ -59,6 +59,13 @@
     li {
       padding: 10px 0;
       color: $red;
+    }
+  }
+
+  .pokemon-detail-properties {
+    li {
+      color: black;
+      font-size: 20px;
     }
   }
 }
@@ -124,5 +131,126 @@
 
   select {
     cursor: pointer;
+  }
+}
+
+.toys {
+  padding: 10px;
+  border: 4px solid black;
+  border-radius: 10px;
+  margin-top: 25px;
+  background-image: radial-gradient(
+      circle at 100% 150%,
+      #f6f6f6 24%,
+      white 25%,
+      white 28%,
+      #f6f6f6 29%,
+      #f6f6f6 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 150%,
+      #f6f6f6 24%,
+      white 25%,
+      white 28%,
+      #f6f6f6 29%,
+      #f6f6f6 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      white 10%,
+      #f6f6f6 11%,
+      #f6f6f6 23%,
+      white 24%,
+      white 30%,
+      #f6f6f6 31%,
+      #f6f6f6 43%,
+      white 44%,
+      white 50%,
+      #f6f6f6 51%,
+      #f6f6f6 63%,
+      white 64%,
+      white 71%,
+      transparent 71%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      white 5%,
+      #f6f6f6 6%,
+      #f6f6f6 15%,
+      white 16%,
+      white 20%,
+      #f6f6f6 21%,
+      #f6f6f6 30%,
+      white 31%,
+      white 35%,
+      #f6f6f6 36%,
+      #f6f6f6 45%,
+      white 46%,
+      white 49%,
+      transparent 50%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 50%,
+      white 5%,
+      #f6f6f6 6%,
+      #f6f6f6 15%,
+      white 16%,
+      white 20%,
+      #f6f6f6 21%,
+      #f6f6f6 30%,
+      white 31%,
+      white 35%,
+      #f6f6f6 36%,
+      #f6f6f6 45%,
+      white 46%,
+      white 49%,
+      transparent 50%,
+      transparent
+    );
+
+  background-size: 100px 50px;
+
+  .toy-list {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border: 4px solid black;
+    border-radius: 6px;
+
+    li {
+      margin: 15px;
+      flex: 1;
+
+      img {
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          box-shadow: 1px 1px 5px black;
+          filter: sepia(50%);
+        }
+
+        width: 100%;
+      }
+    }
+  }
+}
+
+.item-detail {
+  &:not(:first-child) {
+    font-size: 20px;
+    li {
+      color: black;
+    }
   }
 }

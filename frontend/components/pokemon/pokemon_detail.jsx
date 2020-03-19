@@ -31,17 +31,19 @@ const PokemonDetail = props => {
       <figure>
         <img src={props.pokemon.image_url} alt={props.pokemon.name} />
       </figure>
-      <ul>
+      <ul className="pokemon-detail-properties">
         <li>
-          <h3>{props.pokemon.name}</h3>
+          <h2>{props.pokemon.name}</h2>
         </li>
         <li>Type: {props.pokemon.poke_type}</li>
         <li>Attack: {props.pokemon.attack}</li>
         <li>Defense: {props.pokemon.defense}</li>
         <li>Moves: {props.pokemon.moves.join(", ")}</li>
       </ul>
-
-      <ul>{items}</ul>
+      <section className="toys">
+        <h3>Items</h3>
+        <ul className="toy-list">{items}</ul>
+      </section>
       <Route
         path="/pokemon/:pokemonId/item/:itemId"
         component={ItemDetailContainer}
