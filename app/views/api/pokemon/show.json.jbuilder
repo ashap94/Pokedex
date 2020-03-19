@@ -11,11 +11,11 @@ json.items do
     @pokemon.items.each do |item|
         json.set! item.id do
             json.extract! item, :id, :name, :pokemon_id, :price, :happiness
-            begin
-                json.image_url asset_path("images/#{item.image_url}")
-            rescue
+            # begin
+            #     json.image_url asset_path("images/#{item.image_url}")
+            # rescue
                 json.image_url item.image_url
-            end
+            # end
         end
     end
 end
